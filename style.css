@@ -1,0 +1,153 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.search-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.details {
+    width: 300px;
+    border: 1px solid #ccc;
+    display: none;
+    position: relative;
+    z-index: 1000; /* Ensure details are above the map */
+    backdrop-filter: blur(2px); /* Blurs background behind the div */
+    border-radius: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 13px;
+   
+}
+
+.map {
+    height: 300px;
+    width: 300px;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.search-city {
+    position: relative;
+    z-index: 1000; 
+    padding: 20px;
+    border-radius: 10px;
+     ;
+}
+#search-city-name{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    
+}
+
+#search{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#search:hover{
+    background-color: #37803b;
+}
+
+#my-location {
+    position: relative;
+    z-index: 1000; 
+    background: rgba(255, 255, 255, 0.8); 
+    border: #ccc 1px solid;
+    padding: 15px;
+    border-radius: 10px;
+
+
+}
+
+#my-location:hover {
+    background: rgba(255, 255, 255, 1);
+}
+.share{
+    position: absolute;
+    z-index: 1000; 
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    right: 10px;
+   gap: 15px;
+}
+.share a{
+    cursor: pointer;
+   
+    
+    text-decoration: none;
+    font-size: 40px;
+    color: #000;
+    margin-right: 10px;
+    margin: auto;
+    
+}
+
+
+.icon::after {
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust to position the underline correctly */
+    width:100% ;
+    height: 2px;
+    background: #000;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover::after {
+    transform: scaleX(1);
+}
+
+.title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:70px;
+    width: 60%;
+    height: 2px;
+    background-color:#57f30f;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.title:hover::after{
+    transform: scaleX(1);
+}
+
+/*need update on main page*/

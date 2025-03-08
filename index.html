@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-Location</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div id="map"></div>
+
+    <div  class="share" id="share" >
+        <a  class="icon" href="https://github.com/Ravi11-Avi/">              <i class="fa-brands fa-github"></i></a>
+        <a  class="icon" href="https://www.instagram.com/i_willmake_u/">     <i class="fa-brands fa-instagram"></i></a>
+        <a  class="icon" href="https://www.linkedin.com/in/ravi-ranjan-bhakt-75a286354/"><i class="fa-brands fa-linkedin-in"></i></i></a>
+        <a  class="icon" onclick="copyLink()">                               <i class="fa-solid fa-copy"></i></a>
+        
+    </div>
+    <div class="container">
+        <div class="search-city" id="search-city">
+            <h1 class="title">Weather City</h1>  
+            <div class="search-box">
+                <button id="my-location">My Location</button>
+                <input type="text" placeholder="Enter name of Place" name="search-city-name" id="search-city-name">
+                <button id="search" name="search">Search</button>
+            </div>
+        </div>
+
+
+
+        <div class="details" id="details">
+            <h2>Weather Details</h2>
+            <label ><h3>Location:</h3></label>      <h1 id="city-name"></h1>
+            <label ><h3>Date And Time:</h3></label>          <h1 id="city-time"></h1>
+            <label ><h3>Temperature:</h3></label>   <h1 id="city-temp"></h1>
+        </div>
+
+</div>
+
+   
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+<!--updated  -->
+
