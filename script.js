@@ -7,6 +7,8 @@ const myLocation =document.getElementById("my-location");
 const cityName = document.getElementById("city-name");
 const cityTime = document.getElementById("city-time");
 const cityTemp = document.getElementById("city-temp");
+const weatherlogo = document.getElementById("Weather-logo");
+
 
 
 let map = L.map("map").setView([0, 0], 2);    //default map at starrting
@@ -48,7 +50,10 @@ function display(result){
     cityName.innerHTML = `${result.location.name}, ${result.location.region}, ${result.location.country}`;
     cityTemp.innerHTML = result.current.temp_c + "°C";
     cityTime.innerHTML = result.location.localtime;
-    details.style.display = 'block'
+    details.style.display = 'block';
+    const weatherIcon = `<img src="${result.current.condition.icon}" alt="${result.current.condition.text}" />`;
+    weatherlogo.innerHTML = weatherIcon;
+
 
     updateMap(result.location.lat, result.location.lon, result.location.name);
 }
@@ -85,4 +90,4 @@ function copyLink() {
 
     navigator.clipboard.writeText(link)
     
-}//need update on main page
+}
