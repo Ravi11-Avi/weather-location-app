@@ -23,15 +23,16 @@ body, html {
     justify-content: center;
 }
 .details {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     width: 300px;
-    border: 1px solid #ccc;
+    border: 2px solid #ffffff;
     display: none;
     position: relative;
     z-index: 1000; /* Ensure details are above the map */
     backdrop-filter: blur(2px); /* Blurs background behind the div */
-    border-radius: 0px;
+    
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 13px;
    
 }
@@ -86,7 +87,7 @@ body, html {
     border: #ccc 1px solid;
     padding: 15px;
     border-radius: 10px;
-    margin-right: 10px; 
+    margin-right: 10px;     
 
 
 }
@@ -151,4 +152,22 @@ body, html {
     transform: scaleX(1);
 }
 
-/*need update on main page*/
+
+#city-name{
+    font-size: 20px;
+}
+#Weather-logo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Weather-logo img{
+    width: 120px;
+    filter: drop-shadow(2px 2px 2px #000);
+}
+#city-temp{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
